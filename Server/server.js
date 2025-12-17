@@ -8,6 +8,15 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "EduHive API is running successfully",
+    status: "OK"
+  });
+});
+
+
+
 // import routes 
 app.use('/api/auth', require('./src/routes/auth.routes'));
 app.use('/api/students', require('./src/routes/student.routes'));
