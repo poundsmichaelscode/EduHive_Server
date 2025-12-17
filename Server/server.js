@@ -26,5 +26,5 @@ app.use("/api/consultations", require("./src/routes/consultation.routes"));
 const errorHandler = require("./src/middleware/errorMiddleware");
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 1000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
