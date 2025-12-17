@@ -8,10 +8,18 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// import routes (add later) Thia willl be added later
+// import routes 
 app.use('/api/auth', require('./src/routes/auth.routes'));
 app.use('/api/students', require('./src/routes/student.routes'));
-// ...and every other routewii be  imported here
+app.use("/api/teachers", require("./src/routes/teacher.routes"));
+app.use("/api/schools", require("./src/routes/school.routes"));
+app.use("/api/classes", require("./src/routes/class.routes"));
+app.use("/api/subjects", require("./src/routes/subject.routes"));
+app.use("/api/attendance", require("./src/routes/attendance.routes"));
+app.use("/api/records", require("./src/routes/record.routes"));
+app.use("/api/payments", require("./src/routes/payment.routes"));
+app.use("/api/files", require("./src/routes/file.routes"));
+app.use("/api/consultations", require("./src/routes/consultation.routes"));
 
 // Error handling middleware
 
